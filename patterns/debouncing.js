@@ -20,3 +20,9 @@ const handleResize = debounce(() => {
     console.log("Window resized!");
 }, 300);
 window.addEventListener('resize', handleResize);
+
+//  const log = debounce(() => console.log('Debounced!'), 2000);
+//  log();
+// log();
+//  log();
+
