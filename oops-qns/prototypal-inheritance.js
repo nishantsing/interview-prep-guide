@@ -38,3 +38,20 @@ dog.speak = function () {
 
 console.log(dog.hasOwnProperty("speak")); // ✅ true
 // Now it’s the dog’s own property (overrides the prototype version).
+
+/* 
+Object.create for Inheritance
+
+*/
+
+const animal = {
+    speak() {
+        return 'Animal makes a noise';
+    }
+};
+const dog = Object.create(animal);
+dog.speak = function () {
+    return 'Dog barks';
+};
+console.log(dog.speak()); // "Dog barks"
+console.log(animal.speak()); // "Animal makes a noise"
